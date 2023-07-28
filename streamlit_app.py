@@ -1,10 +1,6 @@
 import streamlit as st
 
 
-def main_page():
-    st.header("BookIt AI App")
-
-
 def policy_page():
     st.title("BookIT AI Privacy Policy")
     st.write("Effective Date: 28.07.2023")
@@ -83,9 +79,9 @@ def main():
     selected_page = st.sidebar.selectbox("Go to", pages)
 
     if selected_page == "Privacy Policy":
-        show_privacy_policy()
+        policy_page()
     elif selected_page == "App Support":
-        show_app_support()
+        support_page()
 
 if __name__ == "__main__":
     main()
