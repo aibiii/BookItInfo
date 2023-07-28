@@ -67,7 +67,6 @@ def policy_page():
 
 
 def support_page():
-    st.subheader("Configuration")
     st.title("BookIT AI App Support")
     st.write(
         "Welcome to our App Support Page. Should you have any queries, require assistance with specific features, or even if you just wish to engage with us, please feel free to contact us at kuanaibibi@gmail.com."
