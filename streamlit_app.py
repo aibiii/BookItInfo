@@ -1,22 +1,6 @@
 import streamlit as st
 
 
-def main():
-    st.header("BookIt AI App")
-    st.write("Please select a page:")
-
-    selected_page = st.sidebar.radio(
-        "Navigation", ["Main Page", "Privacy Policy", "App Support"]
-    )
-
-    if selected_page == "Main Page":
-        main_page()
-    elif selected_page == "Privacy Policy":
-        policy_page()
-    elif selected_page == "App Support":
-        support_page()
-
-
 def main_page():
     st.header("BookIt AI App")
 
@@ -93,6 +77,15 @@ def support_page():
         "Welcome to our App Support Page. Should you have any queries, require assistance with specific features, or even if you just wish to engage with us, please feel free to contact us at kuanaibibi@gmail.com.."
     )
 
+def main():
+    st.sidebar.title("Navigation")
+    pages = ["Privacy Policy", "App Support"]
+    selected_page = st.sidebar.selectbox("Go to", pages)
+
+    if selected_page == "Privacy Policy":
+        show_privacy_policy()
+    elif selected_page == "App Support":
+        show_app_support()
 
 if __name__ == "__main__":
     main()
